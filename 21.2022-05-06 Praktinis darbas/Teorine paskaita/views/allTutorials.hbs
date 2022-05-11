@@ -1,0 +1,55 @@
+{{>header}}
+<section class="mainSection1">
+    <div class="flexas">
+        <div>
+            <h2>All {{#if authorized}} public {{/if}} tutorial list</h2>
+        </div>
+        <div>
+            <button class="deleteButton open-button-log">Add Tutorial</button>
+            <dialog class="modalasLog form-group formDiv" id="modalasLog">
+                <div>
+                    <button class="close-button-log addButton">X</button>
+                </div>
+                <div class="modaloDiv">
+                    <form action="/tutorials" method="post">
+                        <input type="text" name="title" placeholder="Title *" class="form-control">
+                        <input type="text" name="content" placeholder="Content *" class="form-control">
+                        <select name="private" class="form-control">
+                            <option value="0">Public</option>
+                            <option value="1">Private</option>
+                        </select>
+                        <input type="submit" class="addButton">
+                    </form>
+                </div>
+            </dialog>
+        </div>
+    </div>
+    <div class="cardsDiv">
+        {{#each data}}
+        <div>
+            <h4>Tutorial title - <span>{{this.title}}</span></h4>
+            <p>Content : <span>{{this.content}}</span></p>
+            {{#if this.private}}
+            <p>This tutorial is - <span>private</span></p>
+            {{/if}}
+            {{#unless this.private}}
+            <p>This tutorial is - <span>public</span></p>
+            {{/unless}}
+        </div>
+        {{/each}}
+    </div>
+</section>
+<script>
+
+    const openModalL = document.querySelector('.open-button-log');
+    const closeModalL = document.querySelector('.close-button-log');
+    const modalL = document.querySelector('.modalasLog');
+
+    openModalL.addEventListener('click', () => {
+        modalL.showModal();
+    })
+
+    closeModalL.addEventListener('click', () => {
+        modalL.close();
+    })
+</script>

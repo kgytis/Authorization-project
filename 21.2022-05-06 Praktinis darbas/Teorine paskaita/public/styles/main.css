@@ -1,0 +1,121 @@
+/* Color variables */
+
+:root {
+    --darkBlue: #03426B;
+    --lightBlue: #02A0C7;
+}
+
+.formDiv {
+    width: 500px;
+    margin-top: 200px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 30px;
+}
+
+.mainSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.btn {
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    margin: 0 5px;
+    padding: 5px 20px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+}
+
+.signUp:hover {
+    background-color: rgba(132, 132, 132, 0.992);
+    color: white
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.cardInfo {
+    border: 1px solid rgba(128, 128, 128, 0.438);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1em;
+}
+
+.date {
+    padding: 0;
+    margin: 0
+}
+
+span {
+    color: rgba(233, 101, 61, 0.586);
+}
+
+section {
+    margin: 0 1em;
+}
+
+.deleteButton {
+    background-color: white;
+    color: var(--darkBlue);
+    border: 1px solid var(--darkBlue);
+    border-radius: 10px;
+    padding: 0.3em 2em;
+}
+
+.addButton {
+    background-color: var(--darkBlue);
+    color: white;
+    border: 1px solid var(--darkBlue);
+    border-radius: 10px;
+    padding: 0.3em 2em;
+}
+
+.addButton:hover {
+    background-color: var(--lightBlue);
+    border-color: var(--lightBlue);
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: var(--lightBlue);
+    border-color: var(--lightBlue);
+    color: white;
+}
+
+.flexas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.modaloDiv form input {
+    margin: 1em 0;
+}

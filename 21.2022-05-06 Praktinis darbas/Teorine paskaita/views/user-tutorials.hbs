@@ -1,0 +1,21 @@
+{{>header}}
+<section class="mainSection1">
+
+    <div>
+        <h2>Your tutorial list</h2>
+    </div>
+    <div class="cardsDiv">
+        {{#each data}}
+        <div>
+            <h4>Tutorial title - <span>{{this.title}}</span></h4>
+            <p>Content : <span>{{this.content}}</span></p>
+            {{#if this.private}}
+            <p>This tutorial is - <span>private</span></p>
+            {{/if}}
+            {{#unless this.private}}
+            <p>This tutorial is - <span>public</span></p>
+            {{/unless}}
+        </div>
+        {{/each}}
+    </div>
+</section>

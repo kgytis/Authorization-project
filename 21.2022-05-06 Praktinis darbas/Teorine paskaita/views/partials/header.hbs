@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="/styles/header.css">
+</head>
+<nav>
+    {{#if email}}
+    <div>
+        <h5>You are logged in as : <span>{{email}}</span></h5>
+    </div>
+    {{/if}}
+    <ul>
+        <a href="/logout">
+            <li>Logout</li>
+        </a>
+        <a href="/user-tutorials">
+            <li>My tutorials</li>
+        </a>
+        <a href="/tutorials">
+            <li>All tutorials</li>
+        </a>
+    </ul>
+</nav>

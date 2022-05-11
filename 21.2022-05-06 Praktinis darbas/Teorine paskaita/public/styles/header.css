@@ -1,0 +1,32 @@
+nav {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+nav,
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul a {
+    margin: 0 2em;
+    font-size: 1.33em;
+    text-decoration: none;
+    color: #02A0C7
+}
+
+ul a:hover {
+    color: #03426B;
+}
